@@ -10,4 +10,9 @@ st.header('User Input Parameters')
 num = st.number_input("Enter the Dividend")
 by  = st.number_input("Enter the Divisor")
 
-st.write(f'The result of {num}/{by} = {num/by}')
+st.subheader(f'The result is')
+try:
+    res = num/by
+    st.write(res)
+except ZeroDivisionError:
+    st.write("Cannot be divided by zero")
